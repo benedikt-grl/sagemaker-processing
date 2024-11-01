@@ -19,6 +19,10 @@ if __name__ == "__main__":
     print(os.getcwd())
     print()
 
+    print("os.listdir()")
+    print(os.listdir(os.getcwd()))
+    print()
+
     from utils.files import find_files_recursively
 
     # Configure logging
