@@ -1,5 +1,4 @@
 import logging
-from utils.files import find_files_recursively
 import argparse
 import json
 import sys
@@ -11,6 +10,16 @@ if __name__ == "__main__":
     parser.add_argument("--input_dir", type=str, required=True, help="A local directory")
     parser.add_argument("--output_dir", type=str, help="Output directory", default="/opt/ml/processing/output")
     args = vars(parser.parse_args())
+
+    print("sys.path")
+    print(sys.path)
+    print()
+
+    print("os.getcwd()")
+    print(os.getcwd())
+    print()
+
+    from utils.files import find_files_recursively
 
     # Configure logging
     log = logging.getLogger(os.path.basename(__file__))
